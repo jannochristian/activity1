@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Calculator</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('light.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a59f94;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input {
+    width: 80px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Wallet Calculator</h2>
+        <label>Wallet Amount:</label>
+        <input type="number" id="wallet" value="5000"><br>
+        
+        <h3>Grocery items (QTY):</h3>
+        <label>Princess Bea Rice (P1000/kg):</label>
+        <input type="number" id="rice" value="3"><br>
+        
+        <label>Water (P100/pack):</label>
+        <input type="number" id="water" value="3"><br>
+
+        <label>Coke (P12.5/8oz):</label>
+        <input type="number" id="coke" value="3"><br>
+        
+        <button onclick="calculate()">Calculate</button>
+        
+        <h3>Result</h3>
+        <p>Wallet Amount: <span id="walletAmount">5000</span></p>
+        <p>Grocery Total: <span id="groceryTotal">0</span></p>
+        <p>Remaining Wallet: <span id="remainingWallet">0</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
